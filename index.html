@@ -1092,8 +1092,9 @@
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      nav { display: flex !important; align-items: center !important; padding: 0.85rem 1.25rem !important; position: relative !important; }
-      .nav-logo { position: absolute !important; left: 50% !important; transform: translateX(-50%) !important; }
+      nav { display: flex !important; align-items: center !important; justify-content: flex-end !important; padding: 0.85rem 1.25rem !important; position: relative !important; }
+      .nav-logo { position: absolute !important; left: 50% !important; transform: translateX(-50%) !important; z-index: 1 !important; }
+      .mobile-nav { z-index: 2 !important; position: relative !important; }
       .nav-left, .nav-right { display: none !important; }
       .nav-logo img { height: 52px !important; }
       .hero { min-height: 100svh !important; padding: 2rem 1.25rem !important; }
@@ -1154,8 +1155,8 @@
     <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
     <li><a onclick="showPage('contact')" class="nav-cta">Book a Call</a></li>
   </ul>
-  <!-- Mobile only -->
-  <div class="mobile-nav">
+  <!-- Mobile only — sits on the right -->
+  <div class="mobile-nav" style="margin-left:auto;">
     <button class="mobile-book-btn" onclick="showPage('contact')">Book a Call</button>
     <button class="mobile-menu-btn" onclick="openMobileMenu()">&#9776;</button>
   </div>
