@@ -1032,39 +1032,11 @@
       .audit-card { padding: 1.5rem; }
       .time-slots-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    /* ============================================================
-   PASTE THIS BLOCK RIGHT BEFORE YOUR CLOSING </style> TAG
-   Desktop is completely unchanged. Only affects phones.
-   ============================================================ */
-
-@media (max-width: 768px) {
-
-  /* NAV */
-  nav {
-    grid-template-columns: 1fr auto !important;
-    padding: 0.85rem 1.25rem !important;
-  }
+    /* @media (max-width: 768px) {
+  nav { grid-template-columns: 1fr auto !important; padding: 0.85rem 1.25rem !important; }
   .nav-left, .nav-right { display: none !important; }
   .nav-logo img { height: 52px !important; }
-
-  /* Add a Book a Call button visible only on mobile */
-  nav::after {
-  content: "Book a Call";
-  background: var(--accent);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 0.82rem;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-  /* HERO */
-  .hero {
-    min-height: 100svh !important;
-    padding: 2rem 1.25rem !important;
-  }
+  .hero { min-height: 100svh !important; padding: 2rem 1.25rem !important; }
   .hero h1 { font-size: 2.3rem !important; line-height: 1.12 !important; }
   .hero p { font-size: 1rem !important; }
   .hero-buttons { flex-direction: column !important; align-items: stretch !important; gap: 0.75rem !important; }
@@ -1072,53 +1044,23 @@
   .hero-arrows { display: none !important; }
   .hero-stats { gap: 1.5rem !important; margin-top: 2rem !important; }
   .stat h3 { font-size: 1.8rem !important; }
-
-  /* GENERAL SECTIONS */
   section { padding: 3rem 1.25rem !important; }
   .section-title { font-size: 1.8rem !important; }
-
-  /* ALL GRIDS — collapse to single column */
-  .pain-grid,
-  .steps-grid,
-  .testimonials-grid,
-  .pricing-grid,
-  .values-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
-
-  /* SERVICES FAQ grid */
-  .section-inner > div[style*="grid-template-columns"] {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* ABOUT PAGE — partner cards stack vertically */
-  #page-about .section-inner > div {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
-  }
-
-  /* CONTACT PAGE */
+  .pain-grid, .steps-grid, .testimonials-grid, .pricing-grid, .values-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  #page-about .section-inner > div { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
   .contact-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
   .contact-form { padding: 1.5rem !important; }
   .time-slots-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* AUDIT TOOL */
   .audit-card { padding: 1.5rem !important; }
   .audit-card h2 { font-size: 1.25rem !important; }
   .checkbox-grid { grid-template-columns: 1fr 1fr !important; gap: 0.5rem !important; }
   .checkbox-item { font-size: 0.82rem !important; padding: 0.7rem 0.75rem !important; }
   .audit-nav { flex-wrap: wrap !important; gap: 0.75rem !important; }
   .audit-container { padding: 1.25rem !important; }
-
-  /* PRICING BUTTONS */
-  .pricing-card .btn-primary,
-  .pricing-card .btn-outline { display: block !important; text-align: center !important; }
-
-  /* FOOTER */
+  .pricing-card .btn-primary, .pricing-card .btn-outline { display: block !important; text-align: center !important; }
   .footer-inner { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
   .footer-bottom { flex-direction: column !important; text-align: center !important; gap: 0.5rem !important; }
-
-  /* BACK TO TOP */
   #back-to-top { bottom: 1rem !important; right: 1rem !important; width: 42px !important; height: 42px !important; }
-
 }
   </style>
 </head>
