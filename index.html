@@ -1021,6 +1021,11 @@
       color: var(--muted);
     }
 
+    /* Hide mobile-only elements on desktop */
+    .mobile-nav { display: none; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; position: fixed; top:0; left:0; right:0; bottom:0; background:rgba(8,12,24,0.98); z-index:9998; flex-direction:column; align-items:center; justify-content:center; }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       nav { grid-template-columns: 1fr auto !important; padding: 0.85rem 1.25rem !important; }
@@ -1052,9 +1057,22 @@
       .footer-bottom { flex-direction: column !important; text-align: center !important; gap: 0.5rem !important; }
       #back-to-top { bottom: 1rem !important; right: 1rem !important; width: 42px !important; height: 42px !important; }
     }
+
+
   </style>
 </head>
 <body>
+
+<!-- MOBILE FULLSCREEN MENU -->
+<div class="mobile-dropdown" id="mobile-menu">
+  <button class="mobile-dropdown-close" onclick="closeMobileMenu()">&#10005;</button>
+  <a onclick="showPage('home');closeMobileMenu()">Home</a>
+  <a onclick="showPage('services');closeMobileMenu()">Services</a>
+  <a onclick="showPage('audit');closeMobileMenu()">Free Audit</a>
+  <a onclick="showPage('about');closeMobileMenu()">About</a>
+  <a onclick="showPage('contact');closeMobileMenu()">Contact</a>
+  <button class="mobile-cta-full" onclick="showPage('contact');closeMobileMenu()">Book a Free Call &rarr;</button>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -1071,6 +1089,11 @@
     <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
     <li><a onclick="showPage('contact')" class="nav-cta">Book a Call</a></li>
   </ul>
+  <!-- Mobile only -->
+  <div class="mobile-nav">
+    <button class="mobile-book-btn" onclick="showPage('contact')">Book a Call</button>
+    <button class="mobile-menu-btn" onclick="openMobileMenu()">&#9776;</button>
+  </div>
 </nav>
 
 <!-- HOME -->
@@ -1958,6 +1981,17 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
       console.log("EmailJS error:", error);
     });
 });
+
+
+// MOBILE MENU
+function openMobileMenu() {
+  document.getElementById('mobile-menu').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.body.style.overflow = '';
+}
 
 </script>
 </body>
