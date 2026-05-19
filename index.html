@@ -1092,10 +1092,10 @@
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      nav { display: flex !important; align-items: center !important; justify-content: flex-end !important; padding: 0.85rem 1.25rem !important; position: relative !important; }
-      .nav-logo { position: absolute !important; left: 50% !important; transform: translateX(-50%) !important; z-index: 1 !important; }
-      .mobile-nav { z-index: 2 !important; position: relative !important; }
+      nav { display: grid !important; grid-template-columns: 1fr auto 1fr !important; align-items: center !important; padding: 0.75rem 1.25rem !important; }
+      .nav-logo { grid-column: 2 !important; justify-self: center !important; position: static !important; transform: none !important; }
       .nav-left, .nav-right { display: none !important; }
+      .mobile-nav { grid-column: 3 !important; justify-self: end !important; position: static !important; z-index: auto !important; }
       .nav-logo img { height: 52px !important; }
       .hero { min-height: 100svh !important; padding: 2rem 1.25rem !important; }
       .hero h1 { font-size: 2.3rem !important; line-height: 1.12 !important; }
@@ -1156,7 +1156,7 @@
     <li><a onclick="showPage('contact')" class="nav-cta">Book a Call</a></li>
   </ul>
   <!-- Mobile only — sits on the right -->
-  <div class="mobile-nav" style="margin-left:auto;">
+  <div class="mobile-nav">
     <button class="mobile-book-btn" onclick="showPage('contact')">Book a Call</button>
     <button class="mobile-menu-btn" onclick="openMobileMenu()">&#9776;</button>
   </div>
