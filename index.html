@@ -1021,8 +1021,72 @@
       color: var(--muted);
     }
 
+    .mobile-nav { display: flex; align-items: center; gap: 0.5rem; }
     /* Hide mobile-only elements on desktop */
-    @media (min-width: 769px) { .mobile-nav { display: none; } }
+    @media (min-width: 769px) { .mobile-nav { display: none !important; } }
+
+    /* Mobile nav button styles — visible on mobile */
+    .mobile-book-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+    .mobile-menu-btn {
+      background: rgba(99,102,241,0.15);
+      border: 1px solid rgba(99,102,241,0.4);
+      color: white;
+      border-radius: 8px;
+      padding: 0.45rem 0.65rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .mobile-dropdown-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: white;
+      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-cta-full {
+      margin-top: 1.5rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    #mobile-menu a {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: white;
+      padding: 0.85rem 2rem;
+      text-align: center;
+      cursor: pointer;
+      letter-spacing: -0.02em;
+    }
+    #mobile-menu a:hover { color: var(--accent); }
     #mobile-menu { display: none; }
     #mobile-menu.open { display: flex; position: fixed; top:0; left:0; right:0; bottom:0; background:rgba(8,12,24,0.98); z-index:9998; flex-direction:column; align-items:center; justify-content:center; }
 
