@@ -1028,7 +1028,8 @@
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      nav { grid-template-columns: 1fr auto !important; padding: 0.85rem 1.25rem !important; }
+      nav { display: flex !important; align-items: center !important; padding: 0.85rem 1.25rem !important; position: relative !important; }
+      .nav-logo { position: absolute !important; left: 50% !important; transform: translateX(-50%) !important; }
       .nav-left, .nav-right { display: none !important; }
       .nav-logo img { height: 52px !important; }
       .hero { min-height: 100svh !important; padding: 2rem 1.25rem !important; }
