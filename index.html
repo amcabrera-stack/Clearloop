@@ -1023,7 +1023,7 @@
 
     .mobile-nav { display: flex; align-items: center; gap: 0.5rem; }
     /* Hide mobile-only elements on desktop */
-    @media (min-width: 769px) { .mobile-nav { display: none !important; } }
+    @media (min-width: 769px) { .mobile-nav { display: none !important; } .mobile-book-wrap { display: none !important; } }
 
     /* Mobile nav button styles — visible on mobile */
     .mobile-book-btn {
@@ -1095,6 +1095,7 @@
       nav { display: grid !important; grid-template-columns: 1fr auto 1fr !important; align-items: center !important; padding: 0.65rem 1rem !important; }
       .nav-logo { grid-column: 2 !important; justify-self: center !important; position: static !important; transform: none !important; }
       .nav-left, .nav-right { display: none !important; }
+      .mobile-book-wrap { grid-column: 1 !important; justify-self: start !important; display: flex !important; align-items: center !important; }
       .mobile-nav { grid-column: 3 !important; justify-self: end !important; position: static !important; z-index: auto !important; }
       .nav-logo img { height: 38px !important; }
       .hero { min-height: 100svh !important; padding: 2rem 1.25rem !important; }
@@ -1147,6 +1148,10 @@
     <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
     <li><a onclick="showPage('audit')" id="nav-audit">Free Audit</a></li>
   </ul>
+  <!-- Mobile book button: col1 -->
+  <div class="mobile-book-wrap">
+    <button class="mobile-book-btn" onclick="showPage('contact')">Book a Call</button>
+  </div>
   <div class="nav-logo">
     <img src="https://i.postimg.cc/mkmPGm6s/clearloop-logo-png.png" alt="Clearloop AI Consulting Logo">
   </div>
@@ -1157,7 +1162,6 @@
   </ul>
   <!-- Mobile only — sits on the right -->
   <div class="mobile-nav">
-    <button class="mobile-book-btn" onclick="showPage('contact')">Book a Call</button>
     <button class="mobile-menu-btn" onclick="openMobileMenu()">&#9776;</button>
   </div>
 </nav>
