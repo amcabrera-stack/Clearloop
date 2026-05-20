@@ -1125,7 +1125,7 @@ body { overflow-x: hidden; }
       .pricing-card .btn-primary, .pricing-card .btn-outline { display: block !important; text-align: center !important; }
       .footer-inner { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
       .footer-bottom { flex-direction: column !important; text-align: center !important; gap: 0.5rem !important; }
-      #back-to-top { bottom: 1rem !important; left: 1rem !important; right: auto !important; width: 42px !important; height: 42px !important; }
+      #back-to-top { bottom: 1.5rem !important; left: 1rem !important; right: auto !important; width: 44px !important; height: 44px !important; z-index: 9999 !important; }
     }
 
 
@@ -1676,7 +1676,7 @@ function showPage(page) {
 
 // BACK TO TOP
 window.addEventListener('scroll', function() {
-  document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 400);
+  document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 200);
 });
 
 // HERO SLIDES
